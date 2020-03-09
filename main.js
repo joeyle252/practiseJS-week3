@@ -68,3 +68,31 @@ console.log(inventors.map(function (value) {
     const initialName = `${letterOfFirstName}.${letterOfLastName}`;
     return initialName
 }))
+//Print out an array of every number multiplied by 100.
+console.log(numbers.map(function (value){
+const multipleNumber = value*100;
+return multipleNumber
+}))
+//Print out an array of the powers of two as shown by this array (e.g. 2, 4, 8, 16 ....).
+console.log(numbers.map(function(value){
+    if (value%2 === 0){
+        const doubleNumber = value + value;
+        return doubleNumber
+    }
+})) // this one wrong, please ask Bitna tmr
+console.log(inventors.sort(function(a,b){
+    if (a<b){
+        return 
+    }
+}))
+
+console.log(inventors.sort(function (a,b) {
+    const letterOfFirstName = splitInventorArr[0].charAt(0); // letterOfFirstName = A
+    var a = splitInventorArr[a].charAt(0);
+    var b = splitInventorArr[b].charAt(0);
+    if (a<b){
+        return -1;
+    } if (a > b) {
+        return 1;
+    } return 0;
+    }))
