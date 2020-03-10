@@ -80,19 +80,41 @@ console.log(numbers.map(function(value){
         return doubleNumber
     }
 })) // this one wrong, please ask Bitna tmr
-console.log(inventors.sort(function(a,b){
-    if (a<b){
-        return 
-    }
-}))
+// 
+// ask this question 
+// console.log(inventors.sort(function (a,b) {
+//     const letterOfFirstName = splitInventorArr[0].charAt(0); // letterOfFirstName = A
+//     var a = splitInventorArr[a].charAt(0);
+//     var b = splitInventorArr[b].charAt(0);
+//     if (a<b){
+//         return -1;
+//     } if (a > b) {
+//         return 1;
+//     } return 0;
+//     }))
+// 
+sortArry=[];
+sortArray = inventors.sort(function(a,b){
+    if (a>b) return 1
+    if (a<b) return -1
+    else return 0
+})
+console.log(sortArray);
 
-console.log(inventors.sort(function (a,b) {
-    const letterOfFirstName = splitInventorArr[0].charAt(0); // letterOfFirstName = A
-    var a = splitInventorArr[a].charAt(0);
-    var b = splitInventorArr[b].charAt(0);
-    if (a<b){
-        return -1;
-    } if (a > b) {
-        return 1;
-    } return 0;
-    }))
+
+//Sort all the inventors by length of name, shortest name first.
+// need to get length of name
+namesLength = [];
+function sortByNameLength(a,b){
+    return a.length-b.length
+}
+namesLength=inventors.sort(sortByNameLength);
+console.log(namesLength);
+
+// namesLength.sort(function (a,b){
+//         if (a>b){
+//         return -1
+//     }if (a<b) {
+//         return 1
+//     } return 0
+//     }))
